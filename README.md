@@ -8,7 +8,10 @@ npm install
 json-server employees.js
 ```
 
-### open Cypress
+### open Cypress test runner
 ```
 npx cypress open
 ```
+
+### run the API test from the Cypress test runner
+select api-spec.js from the Cypress test runner
