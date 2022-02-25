@@ -1,0 +1,19 @@
+{
+  "name": "cypress-api-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^2.1.2",
+    "cypress": "^9.5.0"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "json-server": "^0.17.0"
+  }
+}
