@@ -14,4 +14,4 @@ npx cypress open
 ```
 
 ### run the API test from the Cypress test runner
-select api-spec.js from the Cypress test runner
+- select api-spec.js from the Cypress test runner
