@@ -9,13 +9,11 @@ describe('employees API test with cy.request', () => {
     cy
       .request(
         {
-          url: '/'
+          url: 'http://localhost:3000/employees/'
         }
       )
       .then((response) => {
         expect(response.status).to.eq(200)
-        expect(response).to.have.property('headers')
-        expect(response).to.have.property('duration')
         expect(response.headers['content-type']).to.include('application/json')
         expect(response.body).to.have.length(50)
       })
@@ -29,7 +27,7 @@ describe('employees API test with cy.request', () => {
     cy
       .request({
         method: 'POST',
-        url: '/',
+        url: 'http://localhost:3000/employees/',
         form: false,
         body: {
           first_name: firstName,
@@ -52,7 +50,7 @@ describe('employees API test with cy.request', () => {
         cy
           .request({
             method: 'get',
-            url: "/" + this.newbie.body.id
+            url: "http://localhost:3000/employees/" + this.newbie.body.id
           })
           .then((response) => {
             expect(response.body).to.not.be.null
@@ -65,7 +63,7 @@ describe('employees API test with cy.request', () => {
         cy
           .request({
             method: 'delete',
-            url: "/" + this.newbie.body.id
+            url: "http://localhost:3000/employees/" + this.newbie.body.id
           })
           .then((response) => {
             expect(response.status).to.eq(200)
@@ -74,7 +72,7 @@ describe('employees API test with cy.request', () => {
         cy
           .request({
             method: 'get',
-            url: "/" + this.newbie.body.id,
+            url: "http://localhost:3000/employees/" + this.newbie.body.id,
             failOnStatusCode: false
           })
           .then((response) => {
