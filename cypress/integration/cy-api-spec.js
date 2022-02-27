@@ -1,6 +1,4 @@
-var faker = require('faker')
-
-describe('employees API', () => {
+describe('employees API tests with cy.api', () => {
 
   beforeEach(() => {
     cy
@@ -24,9 +22,9 @@ describe('employees API', () => {
   })
 
   it('add and delete an employee', function () {
-    const firstName = faker.name.firstName()
-    const lastName = faker.name.lastName()
-    const email = faker.internet.email()
+    const firstName = 'Jane'
+    const lastName = 'Tester'
+    const email = 'jane.tester@googling.com'
 
     cy
       .api({
